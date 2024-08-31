@@ -19,7 +19,7 @@
     />
 
     <!-- favicon -->
-    <link rel="icon" href="/Imgs/icons/Vector.png" />
+    <link rel="icon" href="/Imgs/Logo/logo.webp" />
 
     <!-- script tag -->
     <script defer src="/JS/script.js"></script>
@@ -35,12 +35,15 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- Title -->
-    <title>Globeway</title>
   </head>
   <body>
     <!-- Showcase -->
     <main class="main" id="home">
-      <!-- Header -->
+      <!-- Background video -->
+      <video autoplay muted loop playsinline>
+        <source src="/Imgs/gujarat.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
       <header class="header">
         <!-- logo -->
         <div class="logo">
@@ -51,22 +54,41 @@
         <nav class="navbar">
           <ul class="navlists">
             <li class="navlist"><a href="#home">Home</a></li>
+            <li class="navlist"><a href="#About">About</a></li>
             <li class="navlist"><a href="#restaurants">Hotels</a></li>
-            <li class="navlist"><a href="#restaurants">Restaurants</a></li>
-            <li class="navlist"><a href="#tours">Tours</a></li>
             <li class="navlist"><a href="#destinations">Destinations</a></li>
             <li class="navlist"><a href="#activities">Activities</a></li>
+            <li class="navlist"><a href="#peoplesGallery">Gallery</a></li>
+
           </ul>
         </nav>
       </header>
       <!-- showcase-content -->
       <div class="showcase-content">
+         <!-- Welcome to State name -->
         <h1>Welcome to Gujarat</h1>
         <a href="https://earth.google.com/web/@22.2587,71.1924,1500000a,35y,0h,0t,0r" target="_blank" class="showcase-button">
           <img src="/Imgs/icons/globe.png" alt="" /> Discover on 3D globe</a
         >
       </div>
     </main>
+        <!-- about -->
+        <section id="About">
+          <div class="about-content">
+             <!-- About state name -->
+            <h2>About Gujarat</h2>
+            <p>
+               <!-- Description of state -->
+              Experience the vibrant charm of Gujarat, a land where tradition meets modernity. From the breathtaking white expanse of the Rann of Kutch to the serene hill stations like Saputara, Gujarat offers a diverse range of attractions. Explore ancient temples in Dwarka, embark on a thrilling wildlife safari in Gir National Park, and soak in the rich cultural heritage of the state's colorful festivals. With its stunning landscapes, historical treasures, and warm hospitality, Gujarat invites you to embark on a journey of discovery and adventure.
+            </p>
+    
+          </div>
+    
+          <div class="about-img">
+             <!-- Image suitable for that state -->
+            <img src="https://imagizer.imageshack.com/v2/800x600q70/923/F0v4XX.png" alt="" width="556" height="488">
+          </div>
+        </section>
     <!-- popular Destinations -->
     <section class="destinations" id="destinations">
       <div class="container">
@@ -78,19 +100,22 @@
           <div class="destinations-cards swiper-wrapper">
             <!-- card 1 -->
             <div class="destination-card swiper-slide">
-              <a href="#">
+              <a href="statueofunity.html">
+                 <!-- image url of destination 1 -->
               <img
                 src="https://blog.yatradham.org/wp-content/uploads/2023/12/Statue-of-Unity-Ticket.jpg"
                 alt=""
                 width="203"
                 height="181"
               /> </a>
+               <!-- Name of destination -->
               <h5>Statue of unity</h5>
+               <!-- Location name -->
               <h6>Kevadia</h6>
             </div>
             <!-- card 2 -->
             <div class="destination-card swiper-slide">
-              <a href="#">
+              <a href="dwarka.html">
               <img
                 src="https://i0.wp.com/www.tusktravel.com/blog/wp-content/uploads/2019/12/Dwarkadhish-Temple-in-Dwarka.jpg?fit=800%2C622&ssl=1"
                 alt=""
@@ -102,7 +127,7 @@
             </div>
             <!-- card 3 -->
             <div class="destination-card swiper-slide">
-              <a href="#">
+              <a href="suntemple.html">
               <img
                 src="https://www.gujarattourism.com/content/dam/gujrattourism/images/heritage-sites/sun-temple/Sun-Temple-Banner.jpg"
                 alt=""
@@ -114,7 +139,7 @@
             </div>
             <!-- card 4 -->
             <div class="destination-card swiper-slide">
-              <a href="#">
+              <a href="ranikivav.html">
               <img
                 src="https://images.saymedia-content.com/.image/t_share/MTk1MDE1ODkxNTkzNzMzMzE5/rani-ki-vav-a-magnificent-rediscovered-and-retrieved-multi-storied-stepwell-in-gujarat-india.jpg"
                 alt=""
@@ -126,7 +151,7 @@
             </div>
             <!-- card 5 -->
             <div class="destination-card swiper-slide">
-              <a href="#">
+              <a href="fossilpark.html">
               <img
                 src="https://www.gujarattourism.com/content/dam/gujrattourism/images/museums/balasinor-dinosaur-museum/gallery/Dinosaur-Museum-Raiyoli-(4).jpg"
                 alt=""
@@ -138,7 +163,7 @@
             </div>
             <!-- card 6 -->
             <div class="destination-card swiper-slide">
-              <a href="#">
+              <a href="pavagadh.html">
               <img
                 src="https://www.kartavyablogs.in/wp-content/uploads/2024/02/8.jpg.webp"
                 alt=""
@@ -150,7 +175,7 @@
             </div>
             <!-- card 7 -->
             <div class="destination-card swiper-slide">
-              <a href="#">
+              <a href="saputara.html">
               <img
                 src="https://www.gujarattourism.com/content/gujrattourism/en/south-zone/dang/saputara-lake/_jcr_content/root/responsivegrid/detailbannercrop.coreimg.jpeg/1719485479706/donhill.jpeg"
                 alt=""
@@ -162,7 +187,7 @@
             </div>
             <!-- card 8 -->
             <div class="destination-card swiper-slide">
-              <a href="#">
+              <a href="girnationalpark.html">
               <img
                 src="https://www.insideindianjungles.com/wp-content/uploads/2019/07/featured.jpg"
                 alt=""
@@ -178,19 +203,22 @@
     </section>
 
     <!-- Hotels And Restaurants -->
-    <section class="hotel-restaurants" id="restaurants">
-      <div class="container">
-        <div class="title-container">
-          <h2 class="section-title"> Hotels And Restaurants</h2>
-          <div class="section-button hotel-button">view all <img src="/Imgs/icons/bleft.png" alt=""></div>
-        </div>
+      <section class="hotel-restaurants" id="restaurants">
+        <div class="container">
+          <div class="title-container">
+            <h2 class="section-title">Hotels And Restaurants</h2>
+              <div class="section-button hotel-button" id="hotelButton1">view all <img src="/Imgs/icons/bleft.png" alt=""></div>
+          </div>
         <!-- cards -->
         <div class="hotel-card">
           
           <!-- card 1 -->
           <div class="hotel-cards">
+             <!-- image url of hotel 1 -->
             <img src="https://www.hyattdiningclub.com/assets/uploads/property/property_image1646637588_908196.jpg" alt="" width="320" height="380">
+             <!-- Hotel 1 name -->
             <h5>Hyatt Place Vadodara</h5>
+             <!-- location -->
             <h6><img src="/Imgs/icons/map-pin-line.png" alt=""> Gotri - Vasna</h6>
             <div class="ratings"> <img src="/Imgs/icons/rating=5.png" alt=""></div>
           </div>
@@ -257,15 +285,19 @@
 
           <div class="tours-card">
             <div class="tour-img">
+               <!-- YTourist captured image url -->
               <img src="https://i.pinimg.com/originals/55/b2/fc/55b2fc2b0bae780c3157b74d017b6e1c.jpg" alt="" width="320" height="380">
             </div>
             <div class="tours-card-content">
               <div class="tours-card-contents-text">
+                 <!-- title to visited place -->
                 <h3>A Magical Night at the Rann of Kutch</h3>
+                 <!-- Review -->
                 <p>The first time I stepped onto the white expanse of the Rann of Kutch, it felt like walking on the moon. The salt desert, glowing under a full moon, was surreal. Dancing to Garba at the Rann Utsav, surrounded by joyful faces, I felt a deep connection to the land and its culture. The Rann of Kutch isn’t just a place; it’s an experience that stays with you.</p>
               </div>
               <div class="tours-card-content-icons">
                 <h6><img src="/Imgs/icons/calendersml.png" alt=""> Today</h6>
+                 <!-- Tourist name -->
                 <h6><img src="/Imgs/icons/user.png" alt=""> Anmol kumar singh</h6>
               </div>
             </div>
@@ -319,20 +351,72 @@
       </div>
     </section>
 
-    <!-- about -->
-    <section id="About">
-      <div class="about-content">
-        <h2>About Gujarat</h2>
-        <p>
-          Experience the vibrant charm of Gujarat, a land where tradition meets modernity. From the breathtaking white expanse of the Rann of Kutch to the serene hill stations like Saputara, Gujarat offers a diverse range of attractions. Explore ancient temples in Dwarka, embark on a thrilling wildlife safari in Gir National Park, and soak in the rich cultural heritage of the state's colorful festivals. With its stunning landscapes, historical treasures, and warm hospitality, Gujarat invites you to embark on a journey of discovery and adventure.
-        </p>
-
-      </div>
-
-      <div class="about-img">
-        <img src="https://imagizer.imageshack.com/v2/800x600q70/923/F0v4XX.png" alt="" width="556" height="488">
+    <!-- Peoples Gallery -->
+        <section class="hotel-restaurants" id="peoplesGallery">
+          <div class="container">
+            <div class="title-container">
+            <h2 class="section-title">Peoples gallery</h2>
+            <div class="section-button hotel-button" id="hotelButton2">view all <img src="/Imgs/icons/bleft.png" alt=""></div>
+        </div>
+        <!-- cards -->
+        <div class="hotel-card">
+          
+          <!-- card 1 -->
+          <div class="hotel-cards">
+             <!-- Uploaded image from people -->
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPWRLfZNOzTDfw_vlTQhQoLyPBtxIufPgY4J3gH=s1360-w1360-h1020" alt="" width="320" height="380">
+             <!-- image place name -->
+            <h5>Statue of unity</h5>
+             <!-- source of image -->
+            <h6><img src="/Imgs/icons/user.png" alt=""> Source - Jyoti Ankola</h6>
+          </div>
+          <!-- card 2 -->
+          <div class="hotel-cards">
+            <img src="https://www.holidify.com/images/cmsuploads/compressed/3408936173_cea9b8a0b1_k(1)_20200227181557.jpg" alt="" width="320" height="380">
+            <h5> Dwarka</h5>
+            <h6><img src="/Imgs/icons/user.png" alt=""> Source - Akash sharma</h6>
+          </div>
+          <!-- card 3 -->
+          <div class="hotel-cards">
+            <img src="https://i0.wp.com/www.crossroadadventure.com/wp-content/uploads/2022/05/Blog-Featured-Images-23.jpg" alt="" width="320" height="380">
+            <h5> Dwarka</h5>
+            <h6><img src="/Imgs/icons/user.png" alt=""> Source - Harsh choudhary</h6>
+          </div>
+          <!-- card 4 -->
+          <div class="hotel-cards">
+            <img src="https://i0.wp.com/currylines.com/wp-content/uploads/2019/10/IMG_2694.jpg?resize=640%2C427&ssl=1" alt="" width="320" height="380">
+            <h5>Dinosaur Fossil Park</h5>
+            <h6><img src="/Imgs/icons/user.png" alt=""> Source - Caroline's</h6>
+          </div>
+          <!-- card 5 -->
+          <div class="hotel-cards off">
+            <img src="https://assets.cntraveller.in/photos/60be1e48c7150780d0a47e23/1:1/w_768,h_768,c_limit/GettyImages-98210863-1366x768.jpg" alt="" width="320" height="380">
+            <h5>Dinosaur Fossil Park</h5>
+            <h6><img src="/Imgs/icons/user.png" alt=""> Source - Ramchandra liba</h6>
+          </div>
+          <!-- card 6 -->
+          <div class="hotel-cards off">
+            <img src="https://pbs.twimg.com/media/F3fjbKbaQAANtIA?format=jpg&name=large" alt="" width="320" height="380">
+            <h5>Rani ki vav</h5>
+            <h6><img src="/Imgs/icons/user.png" alt=""> Source - Radha</h6>
+          </div>
+          <!-- card 7 -->
+          <div class="hotel-cards off">
+            <img src="https://www.storiesbysoumya.com/wp-content/uploads/2019/06/20180303-Patan-22-min.jpg" alt="" width="320" height="380">
+            <h5>Rani ki vav</h5>
+            <h6><img src="/Imgs/icons/user.png" alt=""> Source - Soumya</h6>
+          </div>
+          <!-- card 8 -->
+          <div class="hotel-cards off">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQWqsyK5eS4x399y3eyfLMno8-vCc0PVMdq-UXihoOvn-ZuSHJJAzDBgmo_Qtfb4Yb004&usqp=CAU" alt="" width="320" height="380">
+            <h5>Modhera Sun Temple</h5>
+            <h6><img src="/Imgs/icons/user.png" alt=""> Source - Debajini lahiri</h6>
+          </div>
+        </div>
       </div>
     </section>
+
+
     <div class="toggleOn"><i class="uil uil-align-center-alt"></i></div>
     <div class="toggleClose"><i class="uil uil-multiply"></i></div>
   </body>
