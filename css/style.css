@@ -22,6 +22,9 @@
 
   --conatiner--size: 73%;
 }
+#activities {
+  margin-bottom: 50px; /* Adjust the value as needed */
+}
 
 /* variable Class */
 .section-title {
