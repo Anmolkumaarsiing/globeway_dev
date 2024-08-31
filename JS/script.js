@@ -1,7 +1,7 @@
+// ScrollReveal Configuration
 ScrollReveal({
   mobile: false,
-}
-)
+});
 
 ScrollReveal().reveal('.header', {
   delay: 500,
@@ -16,7 +16,6 @@ ScrollReveal().reveal('.showcase-content h1', {
 });
 
 ScrollReveal().reveal('.showcase-content', {
-
   scale: 2,
   duration: 3000,
   delay: 500,
@@ -47,7 +46,8 @@ ScrollReveal().reveal('.section-title', {
   origin: 'left',
   distance: '50px',
 });
-ScrollReveal().reveal('.hotel-card , #tours, #activities', {
+
+ScrollReveal().reveal('.hotel-card, #tours, #activities', {
   duration: 1500,
   origin: 'left',
   distance: '50px',
@@ -59,6 +59,7 @@ ScrollReveal().reveal('.about-content', {
   origin: 'left',
   distance: '50px',
 });
+
 ScrollReveal().reveal('.about-img', {
   reset: true,
   duration: 1500,
@@ -66,6 +67,7 @@ ScrollReveal().reveal('.about-img', {
   distance: '50px',
 });
 
+// Swiper Configuration with Autoplay
 const swiper = new Swiper('.swiper1', {
   direction: 'horizontal',
   loop: true,
@@ -75,6 +77,17 @@ const swiper = new Swiper('.swiper1', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  autoplay: {
+    delay: 500, // Delay in milliseconds (3 seconds)
+    disableOnInteraction: false, // Continue autoplay after user interactions
   },
   breakpoints: {
     240: {
@@ -90,38 +103,52 @@ const swiper = new Swiper('.swiper1', {
       spaceBetween: 10,
     },
   },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
 });
 
+// Toggle Buttons for Hotel Cards
+const hotelButton1 = document.querySelector('#hotelButton1');
+const hotelCards1 = document.querySelectorAll('#restaurants .hotel-cards');
 
-// hotel rxpand collapse fun
-const hotelButton = document.querySelector('.hotel-button');
-const hotelCard = document.querySelectorAll('.off');
-const text = hotelButton.innerText;
-
-hotelButton.addEventListener('click', (e) => {
+hotelButton1.addEventListener('click', (e) => {
   e.preventDefault();
-  hotelCard.forEach((x) => {
-    x.classList.toggle('on');
+  hotelCards1.forEach((card) => {
+    card.classList.remove('off'); // Ensure all images are shown
   });
 
-  if (e.target.innerHTML !== 'less <img src="/Imgs/icons/bleft.png">') {
-    e.target.innerHTML = `less <img src="/Imgs/icons/bleft.png" >`;
+  if (e.target.innerHTML.includes('view all')) {
+    e.target.innerHTML = `less <img src="/Imgs/icons/bleft.png">`;
   } else {
-    e.target.innerHTML = `view all <img src="/Imgs/icons/bleft.png" >`;
+    hotelCards1.forEach((card, index) => {
+      if (index >= 4) { // Assuming the first 4 images are always visible
+        card.classList.toggle('off');
+      }
+    });
+    e.target.innerHTML = `view all <img src="/Imgs/icons/bleft.png">`;
   }
 });
 
+const hotelButton2 = document.querySelector('#hotelButton2');
+const hotelCards2 = document.querySelectorAll('#peoplesGallery .hotel-cards');
 
+hotelButton2.addEventListener('click', (e) => {
+  e.preventDefault();
+  hotelCards2.forEach((card) => {
+    card.classList.remove('off'); // Ensure all images are shown
+  });
 
-// 
+  if (e.target.innerHTML.includes('view all')) {
+    e.target.innerHTML = `less <img src="/Imgs/icons/bleft.png">`;
+  } else {
+    hotelCards2.forEach((card, index) => {
+      if (index >= 4) { // Assuming the first 4 images are always visible
+        card.classList.toggle('off');
+      }
+    });
+    e.target.innerHTML = `view all <img src="/Imgs/icons/bleft.png">`;
+  }
+});
+
+// Navbar Toggle Functionality
 const toogleOn = document.querySelector('.toggleOn');
 const toogleClose = document.querySelector('.toggleClose');
 const navbar = document.querySelector('.navbar');
@@ -140,7 +167,6 @@ toogleClose.addEventListener('click', (e) => {
   toogleOn.classList.remove('toggleOnClose');
 });
 
-console.log('navlists');
 navlists.forEach((xy) => {
   xy.addEventListener('click', (x) => {
     navbar.classList.remove('navlistOn');
